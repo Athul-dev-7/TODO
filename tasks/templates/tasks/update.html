@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>UPDATE | TASK</title>
+    <style>
+        body {
+            background-color: #eb72db;
+        }
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+        input::placeholder {
+            color: #d3d3d3;
+        }
+        
+        .center-column {
+            width:600px;
+            margin: 20px auto;
+            padding:20px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+        }
+        a {
+            width: 100%;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="center-column">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.title}}
+            {{form.completed}}
+            <input class="btn btn-info" type="submit" name="update task">
+            <a class="btn btn-danger" href="{% url 'list' %}">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
