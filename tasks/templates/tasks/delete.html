@@ -41,7 +41,7 @@
         </p>
         <form method="POST" action="">
             {% csrf_token %}
-            <input class="btn btn-info" type="submit" name="confirm" placeholder="YES">
+            <input class="btn btn-info" type="submit" name="confirm" value="Delete">
         </form>
         <a class="btn btn-danger" href="{% url 'list' %}">Cancel</a>
     </div>
